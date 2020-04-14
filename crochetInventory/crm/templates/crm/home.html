@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'crm/base.html' %}
+{% load staticfiles %}
+{% block content %}
+
+   <body>
+   {% if user.is_authenticated %}
+     <div class="page-container">
+
+       <h2 class="top-menu">Hello {{ user.username }},</h2>
+       <p>Please choose from below options.</p>
+
+     </div>
+   {% endif %}
+   <div class="content container">
+     <div class="row">
+       <div class="col-md-12">
+         <div class="links">
+           <!-- Example row of columns -->
+           <div class="row">
+             <div class="col-md-3">
+               <div class="thumbnail">
+                 <img src="{% static "images/crochethook.jpeg" %}" alt="customer"/>
+                 <div class="caption">
+                   <h2>CrochetHook</h2>
+                   <p>We see our success in our CrochetHooks success </p>
+                   <p><a class="btn btn-primary" href="{% url 'crm:crochethook_list' %}"
+                      role="button">View
+                      details &raquo;</a></p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-3">
+               <div class="thumbnail">
+                 <img src="{% static "images/cropped-2_knitting-balls1.jpg" %}" alt="knitting-balls"/>
+                 <div class="caption">
+                   <h2>Yarns</h2>
+                   <p>Great Yarns</p>
+                   <p><a class="btn btn-primary" href="{% url 'crm:yarn_list' %}"
+                      role="button">View
+                      details &raquo;</a></p>
+                 </div>
+               </div>
+             </div>
+             <div class="col-md-3">
+               <div class="thumbnail">
+                 <img src="{% static "images/crochet-blanket-featured-1.jpg"%}" alt="crochet-blanket"/>
+                 <div class="caption">
+                   <h2>Gifts</h2>
+                   <p>Great Gifts.</p>
+                   <p><a class="btn btn-primary" href="{% url 'crm:gift_list' %}"
+                      role="button">View
+                      details &raquo;</a></p>
+                 </div>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+   </body>
+
+{% endblock %}
+
+</html>
