@@ -37,7 +37,7 @@ def crochethook_new(request):
             crochethook.save()
             crochethooks = CrochetHook.objects.filter(created_date__lte=timezone.now())
             return render(request, 'crm/crochethook_list.html',
-                          {'crochethooks': crochethook})
+                          {'crochethooks': crochethooks})
     else:
         form = CrochetHookForm()
         # print("Else")
@@ -56,7 +56,7 @@ def crochethook_edit(request, pk):
             crochethook.save()
             crochethook = CrochetHook.objects.filter(created_date__lte=timezone.now())
             return render(request, 'crm/crochethook_list.html',
-                          {'crochethooks': crochethook})
+                          {'crochethooks': crochethooks})
     else:  # edit
             form = CrochetHookForm(instance=crochethook)
     return render(request, 'crm/crochethook_edit.html', {'form': form})

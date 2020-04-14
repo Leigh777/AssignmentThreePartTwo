@@ -93,10 +93,10 @@
          </div>
     </nav>
     <div class="content container">
-        <div class="row">
-           <div class="col-md-8">
-             {% block content %}
-              <div class="links">
+      <div class="row">
+        <div class="col-md-8">
+          {% block content %}
+           <div class="links">
                 <!-- Example row of columns -->
                 <div class="row">
                   <div class="col-md-3">
@@ -105,38 +105,36 @@
                       <div class="caption">
                          <h2>CrochetHook</h2>
                           <p>Using CrochetHooks for a delightful gift experience is our main goal. </p>
-                          {% if user.is_authenticated %}
                             <p><a class="btn btn-default" href="{% url 'crm:crochethook_list' %}"
                                role="button">View
                                details &raquo;</a></p>
-                          {% endif %}
                       </div>
                     </div>
                   </div>
-                <div class="col-md-3">
-                  <div class="thumbnail">
-                    <img src="{% static "images/cropped-2_knitting-balls1.jpg" %}" alt="knitting-balls"/>
-                    <div class="caption">
-                      <h2>Yarns</h2>
-                      <p>Our yarns are second to none.</p>
-                      <p><a class="btn btn-default" href="{% url 'crm:yarn_list' %}"
-                         role="button">View
-                       details &raquo;</a></p>
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <img src="{% static "images/cropped-2_knitting-balls1.jpg" %}" alt="knitting-balls"/>
+                      <div class="caption">
+                         <h2>Yarns</h2>
+                          <p>Our yarns are second to none.</p>
+                            <p><a class="btn btn-default" href="{% url 'crm:yarn_list' %}"
+                               role="button">View
+                               details &raquo;</a></p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="thumbnail">
+                      <img src="{% static "images/crochet-blanket-featured-1.jpg" %}" alt="crochet-blanket"/>
+                      <div class="caption">
+                         <h2>Gifts</h2>
+                          <p>High quality gifts at affordable prices.</p>
+                            <p><a class="btn btn-default" href="{% url 'crm:gift_list' %}" role="button">View
+                               details &raquo;</a></p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3">
-                  <div class="thumbnail">
-                    <img src="{% static "images/crochet-blanket-featured-1.jpg" %}" alt="crochet-blanket"/>
-                    <div class="caption">
-                      <h2>Gifts</h2>
-                      <p>High quality gifts at affordable prices.</p>
-                      <p><a class="btn btn-default" href="{% url 'crm:gift_list' %}" role="button">View
-                        details &raquo;</a></p>
-                    </div>
-                  </div>
-              </div>
-             </div>
            </div>
           {% endblock %}
         </div>
